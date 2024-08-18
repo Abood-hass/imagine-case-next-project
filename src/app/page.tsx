@@ -2,6 +2,10 @@ import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { CheckIcon, StarFilledIcon } from "@radix-ui/react-icons";
 import Phone from "@/components/Phone";
+import Reviews from "@/components/Reviews";
+import UserReview from "@/components/UserReview";
+import { Icons } from "@/components/Icons";
+import { reviews } from '@/usersReviews'
 
 export default function Home() {
   return (
@@ -109,6 +113,59 @@ export default function Home() {
               <Phone className="w-64" imgSrc={"/testimonials/1.jpg"} />
             </div>
           </div>
+        </MaxWidthWrapper>
+      </section>
+
+
+      <section className="bg-slate-100 py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 ">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
+              What our
+              <span className="relative px-2">
+                customers
+                <Icons.underLine className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-green-500" />
+              </span>
+              say
+            </h2>
+
+            <Image height={100} width={100} src={"/snake-2.png"} className="w-24
+             order-0 lg:order-2" alt={""} />
+          </div>
+
+          <div className="mx-auto grid max-w-2xl grid-col-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
+            {/* <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20 ">
+              <div className="flex gap-0.5 mb-2">
+                {[...new Array(5)].map((_, i) => {
+                  return <StarFilledIcon key={'start-' + ++i} className="h-5 text-green-600 fill-green-600" />
+                })}
+              </div>
+              <div className="text-lg leading-8 ">
+                <p>
+                  "The case are looking great and i even get compliment about the texture and the material. I have the case for 
+                  months and a half and <span className="bg-slate-800 text-white py-0.5 px-1">The image super clear</span>"
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <Image className="rounded-full h-12 w-12 object-cover" height={100} width={100} src={"/users/user-1.png"} alt={"user"} />
+                <div className="flex flex-col">
+                  <p className="font-semibold capitalize">jonathan</p>
+                  <div className="flex gap-0.5 items-center text-zinc-600">
+                    <CheckIcon className="h-4 w-4 stroke-[3px] text-green-600" />
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+              </div>
+
+            </div> */}
+
+            {reviews.map((rev, i) => (<UserReview Name={rev.userName} Img={rev.userimage} Review={rev.reviewText()} />))}
+
+
+          </div>
+        </MaxWidthWrapper>
+        <MaxWidthWrapper>
+          <Reviews />
         </MaxWidthWrapper>
       </section>
     </div>
