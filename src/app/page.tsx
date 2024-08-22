@@ -168,7 +168,7 @@ export default function Home() {
         </MaxWidthWrapper>
 
 
-        <div className="pt-16">
+        <div className="pt-16 overflow-x-hidden">
           <Reviews />
         </div>
       </section>
@@ -218,7 +218,7 @@ export default function Home() {
 
             <div className="flex justify-center">
 
-              <Link className={buttonVariants({size:"lg", className:"mx-auto mt-8"})} href={"/configure/upload"}>
+              <Link className={buttonVariants({ size: "lg", className: "mx-auto mt-8" })} href={"/configure/upload"}>
                 Create your own case Now
                 <ArrowRightIcon className="h-4 w-4 ml-1.5" />
               </Link>
