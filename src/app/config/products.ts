@@ -8,3 +8,5 @@ export const PRODUCT_CONFIG = {
     texture: 3_00,
   },
 } as const;
+
+export const BASE_PRICE = 14_00;

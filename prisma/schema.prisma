@@ -7,10 +7,46 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum orderStatus {
+  fulfilled
+  shipped
+  awaiting_shipment
+}
+
+enum PhoneModels {
+  iphonex
+  iphone11
+  iphone12
+  iphone13
+  iphone14
+  iphone15
+}
+
+enum CaseMaterial {
+  sillicon
+  polycarbonate
+}
+
+enum CaseFinish {
+  smooth
+  texture
+}
+
+enum CaseColor {
+  black
+  blue
+  rose
+  green
+}
+
 model Configuration {
-  id String @id @default(cuid())
-  width Int 
-  height Int
-  imageURL String
-  croppedImageURL String? 
+  id              String        @id @default(cuid())
+  width           Int
+  height          Int
+  imageURL        String
+  color           CaseColor?
+  model           PhoneModels?
+  material        CaseMaterial?
+  finish          CaseFinish?
+  croppedImageURL String?
 }
