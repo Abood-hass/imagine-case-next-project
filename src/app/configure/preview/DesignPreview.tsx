@@ -19,7 +19,7 @@ import LoginModal from "@/components/ui/LoginModal";
 function Index({ configuration }: { configuration: Configuration }) {
   const [showConfetti, setShowConfetti] = useState<boolean>(false);
 
-  useEffect(() => setShowConfetti(true));
+  useEffect(() => setShowConfetti(true), []);
 
   const router = useRouter();
 
