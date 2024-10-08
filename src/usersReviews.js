@@ -1,7 +1,7 @@
 export const reviews = [
   {
     userName: "user number one",
-    userimage: "user-1.png",
+    userImage: "user-1.png",
     reviewText: () => (
       <>
         "The case are looking great and i even get compliment about the texture
@@ -15,7 +15,7 @@ export const reviews = [
   },
   {
     userName: "user number Two",
-    userimage: "user-2.png",
+    userImage: "user-2.png",
     reviewText: () => (
       <>
         "The case are looking great and i even get compliment about the texture
@@ -29,7 +29,7 @@ export const reviews = [
   },
   {
     userName: "user number Three",
-    userimage: "user-3.png",
+    userImage: "user-3.png",
     reviewText: () => (
       <>
         "The case are looking great and i even get compliment about the texture
@@ -43,7 +43,7 @@ export const reviews = [
   },
   {
     userName: "user number Four",
-    userimage: "user-4.png",
+    userImage: "user-4.png",
     reviewText: () => (
       <>
         "The case are looking great and i even get compliment about the texture
@@ -57,7 +57,7 @@ export const reviews = [
   },
   {
     userName: "user number Five",
-    userimage: "user-5.png",
+    userImage: "user-5.png",
     reviewText: () => (
       <>
         "The case are looking great and i even get compliment about the texture

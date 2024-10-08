@@ -1,11 +1,15 @@
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { CheckIcon, StarFilledIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import {
+  CheckIcon,
+  StarFilledIcon,
+  ArrowRightIcon,
+} from "@radix-ui/react-icons";
 import Phone from "@/components/Phone";
 import Reviews from "@/components/Reviews";
 import UserReview from "@/components/UserReview";
 import { Icons } from "@/components/Icons";
-import { reviews } from '@/usersReviews'
+import { reviews } from "@/usersReviews";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -118,7 +122,6 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
 
-
       <section className="bg-slate-100 py-24">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 ">
@@ -131,8 +134,14 @@ export default function Home() {
               say
             </h2>
 
-            <Image height={100} width={100} src={"/snake-2.png"} className="w-24
-             order-0 lg:order-2" alt={""} />
+            <Image
+              height={100}
+              width={100}
+              src={"/snake-2.png"}
+              className="w-24
+              order-0 lg:order-2"
+              alt={""}
+            />
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-col-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
@@ -161,12 +170,16 @@ export default function Home() {
 
             </div> */}
 
-            {reviews.map((rev, i) => (<UserReview Name={rev.userName} Img={rev.userimage} Review={rev.reviewText()} />))}
-
-
+            {reviews.map((rev, i) => (
+              <UserReview
+                key={i}
+                Name={rev.userName}
+                Img={rev.userImage}
+                Review={rev.reviewText()}
+              />
+            ))}
           </div>
         </MaxWidthWrapper>
-
 
         <div className="pt-16 overflow-x-hidden">
           <Reviews />
@@ -178,7 +191,7 @@ export default function Home() {
           <div className="mb-12 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
-                Upload Your Photo and get {" "}
+                Upload Your Photo and get{" "}
                 <span className="relative px-2 bg-green-600 text-white">
                   your own Case
                 </span>
@@ -189,14 +202,23 @@ export default function Home() {
 
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="relative flex flex-col items-center md:grid grid-cols-2 gap-40">
-
-              <Image src={"/arrow.png"} className="absolute top-[25rem] md:top-1/2 -translate-y-1/2 -translate-x-1/2 
-              left-1/2 z-10 rotate-90 md:rotate-0" alt={"arrow"} width={100} height={100} />
+              <Image
+                src={"/arrow.png"}
+                className="absolute top-[25rem] md:top-1/2 -translate-y-1/2 -translate-x-1/2 
+              left-1/2 z-10 rotate-90 md:rotate-0"
+                alt={"arrow"}
+                width={100}
+                height={100}
+              />
 
               <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-gray-900/5 ring-inset ring-gray-900/10 lg:rounded-2xl">
-
-                <Image src={"/horse.jpg"} className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-offset-gray-900/10 h-full w-full" alt={"horse"} width={1000} height={1000} />
-
+                <Image
+                  src={"/horse.jpg"}
+                  className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-offset-gray-900/10 h-full w-full"
+                  alt={"horse"}
+                  width={1000}
+                  height={1000}
+                />
               </div>
 
               <Phone imgSrc="/horse_phone.jpg" className="w-60" />
@@ -204,21 +226,26 @@ export default function Home() {
           </div>
 
           <ul className="mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
-            {
-              [
-                "High-quality silicon material",
-                "Scratch and Fingerprint reistant coating",
-                "Wireless Charging compatible",
-                "5 Years Print warrnaty",
-              ].map((point) => <li key={point} className="w-fit">
+            {[
+              "High-quality silicon material",
+              "Scratch and Fingerprint reistant coating",
+              "Wireless Charging compatible",
+              "5 Years Print warrnaty",
+            ].map((point) => (
+              <li key={point} className="w-fit">
                 <CheckIcon className="h-5 w-5 text-green-600 inline mr-1.5" />
                 {point}
-              </li>)
-            }
+              </li>
+            ))}
 
             <div className="flex justify-center">
-
-              <Link className={buttonVariants({ size: "lg", className: "mx-auto mt-8" })} href={"/configure/upload"}>
+              <Link
+                className={buttonVariants({
+                  size: "lg",
+                  className: "mx-auto mt-8",
+                })}
+                href={"/configure/upload"}
+              >
                 Create your own case Now
                 <ArrowRightIcon className="h-4 w-4 ml-1.5" />
               </Link>
