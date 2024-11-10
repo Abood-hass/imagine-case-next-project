@@ -97,28 +97,28 @@ function Index({ configuration }: { configuration: Configuration }) {
           <h3 className="text-3xl font-bold tracking-tight text-gray-900">
             Your {moduleLabel} Case
           </h3>
-          <div className="mt-3 flex items-center gap-1.5 text-base">
+          <div className="mt-3 flex items-center gap-1.5 text-base text-right">
+            تم إعداد الطلب وجاهز للشحن
             <CheckIcon className="h-4 w-4 text-green-500 " />
-            In stock and raedy to ship
           </div>
         </div>
-        <div className="sm:col-span-12 md:col-span-9 text-base  ">
+        <div className="sm:col-span-12 md:col-span-9 text-base text-right">
           <div className="grid grid-cols-1 gap-y-8 border-b border-gray-200 py-8 sm:grid-cols-2 sm:gap-x-6 sm:py-6 md:py-10">
             <div>
-              <p className="font-medium text-zinc-950">Highlights</p>
+              <p className="font-medium text-zinc-950">مزايا</p>
               <ol className="mt-3 text-zinc-700 list-disc list-inside">
-                <li>Wireless charging compatable</li>
-                <li>TPU shock absorption</li>
-                <li>Packaging made from recycled materials</li>
-                <li>5 years print warranty</li>
+                <li>داعم للشجن اللاسلكي</li>
+                {/* <li>TPU shock absorption</li> */}
+                <li>خامات من مواد معادة تصنيعها</li>
+                <li>5 سنوات ضمان جودة</li>
               </ol>
             </div>
             <div>
               <div>
-                <p className="font-medium text-zinc-950">Materials</p>
+                <p className="font-medium text-zinc-950">خامات</p>
                 <ol className="mt-3 text-zinc-700 list-disc list-inside">
-                  <li>High-quality, adurable material</li>
-                  <li>Scratch and Fingerprint resistant coating</li>
+                  <li>جودة عالية, ومرونة شديدة</li>
+                  <li>مضاد للخدوش والبصامات</li>
                 </ol>
               </div>
             </div>
@@ -126,14 +126,14 @@ function Index({ configuration }: { configuration: Configuration }) {
               <div className="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
                 <div className="flow-root text-sm">
                   <div className="flex items-center justify-between py-1 mt-2">
-                    <p className="text-gray-600">Base price</p>
+                    <p className="text-gray-600">السعر الأساسي</p>
                     <p className="font-medium text-gray-900">
                       {formatPrice(BASE_PRICE / 100)}
                     </p>
                   </div>
                   {finish === "texture" ? (
                     <div className="flex items-center justify-between py-1 mt-2">
-                      <p className="text-gray-600">Texture finish</p>
+                      <p className="text-gray-600">نوع الملمس</p>
                       <p className="font-medium text-gray-900">
                         {formatPrice(PRODUCT_CONFIG.finish.texture / 100)}
                       </p>
@@ -143,7 +143,7 @@ function Index({ configuration }: { configuration: Configuration }) {
                   )}
                   {material === "polycarbonate" ? (
                     <div className="flex items-center justify-between py-1 mt-2">
-                      <p className="text-gray-600">Material finish</p>
+                      <p className="text-gray-600">خامات التصنيع</p>
                       <p className="font-medium text-gray-900">
                         {formatPrice(
                           PRODUCT_CONFIG.material.polycarbonate / 100
@@ -155,7 +155,7 @@ function Index({ configuration }: { configuration: Configuration }) {
                   )}
                   <div className="my-2 h-px bg-gray-200" />
                   <div className="flex item-center justify-between py-2">
-                    <p className="font-semibold text-gray-900">Order total</p>
+                    <p className="font-semibold text-gray-900">مجموع الطلب</p>
                     <p className="font-semibold text-gray-900">
                       {formatPrice(totalPrice / 100)}
                     </p>

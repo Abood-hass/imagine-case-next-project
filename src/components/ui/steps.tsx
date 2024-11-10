@@ -6,18 +6,18 @@ import { usePathname } from 'next/navigation'
 
 const STEPS = [
     {
-        name: 'Add image',
-        description: 'Choose an image for your case',
+        name: ' أضف صورة ',
+        description: 'أختر صورة لتكون على حمياة هاتفك',
         url: '/upload',
     },
     {
-        name: 'Customize design',
-        description: 'Make the case yours',
+        name: 'خصص الحماية بما ترغبه',
+        description: 'أجعله ينطق بأسمك',
         url: '/design',
     },
     {
-        name: 'Summary',
-        description: 'Review your final design',
+        name: 'مراجعة',
+        description: 'نظرة اخيرة قبل الطلب',
         url: '/preview',
     },
 ]
@@ -51,16 +51,10 @@ const Steps = () => {
                             <span
                                 className={cn(
                                     i !== 0 ? 'lg:pl-9' : '',
-                                    'flex items-center px-6 py-4 text-sm font-medium'
+                                    'flex items-center justify-end gap-4 px-6 py-4 text-sm font-medium'
                                 )}>
-                                <span className='flex-shrink-0'>
-                                    <Image className={cn("flex h-10 w-10 object-contain items-center justify-center", {
-                                        "border-none": isCompleted,
-                                        "border-zinc-700": isCurrent,
-                                    })} alt={""} width={100} height={100} src={imgPath} />
-                                </span>
 
-                                <span className='ml-4 h-full mt-0.5 flex min-w-0 flex-col justify-center'>
+                                <span className='ml-4 h-full mt-0.5 flex min-w-0 flex-col justify-center text-right'>
                                     <span
                                         className={cn('text-sm font-semibold text-zinc-700', {
                                             'text-primary': isCompleted,
@@ -71,6 +65,14 @@ const Steps = () => {
                                     <span className='text-sm text-zinc-500'>
                                         {step.description}
                                     </span>
+                                </span>
+
+
+                                <span className='flex-shrink-0'>
+                                    <Image className={cn("flex h-10 w-10 object-contain items-center justify-center", {
+                                        "border-none": isCompleted,
+                                        "border-zinc-700": isCurrent,
+                                    })} alt={""} width={100} height={100} src={imgPath} />
                                 </span>
                             </span>
 

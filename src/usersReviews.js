@@ -1,73 +1,27 @@
 export const reviews = [
   {
-    userName: "user number one",
+    userName: "عميل مخلص",
     userImage: "user-1.png",
-    reviewText: () => (
-      <>
-        "The case are looking great and i even get compliment about the texture
-        and the material. I have the case for months and a half and{" "}
-        <span className="bg-slate-800 text-white py-0.5 px-1">
-          The image super clear
-        </span>
-        "
-      </>
-    ),
+    reviewText: () => <>"طباعة مذهلة ومواد تصنيع رائعة جداً "</>,
   },
   {
-    userName: "user number Two",
+    userName: "عميل مخلص",
     userImage: "user-2.png",
-    reviewText: () => (
-      <>
-        "The case are looking great and i even get compliment about the texture
-        and the material. I have the case for months and a half and{" "}
-        <span className="bg-slate-800 text-white py-0.5 px-1">
-          The image super clear
-        </span>
-        "
-      </>
-    ),
+    reviewText: () => <>"طباعة مذهلة ومواد تصنيع رائعة جداً "</>,
   },
   {
-    userName: "user number Three",
+    userName: "عميل مخلص",
     userImage: "user-3.png",
-    reviewText: () => (
-      <>
-        "The case are looking great and i even get compliment about the texture
-        and the material. I have the case for months and a half and{" "}
-        <span className="bg-slate-800 text-white py-0.5 px-1">
-          The image super clear
-        </span>
-        "
-      </>
-    ),
+    reviewText: () => <>"طباعة مذهلة ومواد تصنيع رائعة جداً "</>,
   },
   {
-    userName: "user number Four",
+    userName: "عميل مخلص",
     userImage: "user-4.png",
-    reviewText: () => (
-      <>
-        "The case are looking great and i even get compliment about the texture
-        and the material. I have the case for months and a half and{" "}
-        <span className="bg-slate-800 text-white py-0.5 px-1">
-          The image super clear
-        </span>
-        "
-      </>
-    ),
+    reviewText: () => <>"طباعة مذهلة ومواد تصنيع رائعة جداً "</>,
   },
   {
-    userName: "user number Five",
+    userName: "عميل مخلص",
     userImage: "user-5.png",
-    reviewText: () => (
-      <>
-        "The case are looking great and i even get compliment about the texture
-        and the material. I have the case for months and a half and{" "}
-        <span className="bg-slate-800 text-white py-0.5 px-1">
-          The image super clear
-        </span>
-        "
-      </>
-    ),
+    reviewText: () => <>"طباعة مذهلة ومواد تصنيع رائعة جداً "</>,
   },
-  
 ];

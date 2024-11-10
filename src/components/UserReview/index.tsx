@@ -16,7 +16,7 @@ const index = (
         <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20 ">
             <div className="flex gap-0.5 mb-2">
                 {[...new Array(5)].map((_, i) => {
-                    return <StarFilledIcon key={'start-' + ++i} className="h-5 text-green-600 fill-green-600" />
+                    return <StarFilledIcon key={'start-' + ++i} className="h-5 text-teal-800 fill-teal-800" />
                 })}
             </div>
             <div className="text-lg leading-8 ">
@@ -29,8 +29,8 @@ const index = (
                 <div className="flex flex-col">
                     <p className="font-semibold capitalize">{Name}</p>
                     <div className="flex gap-0.5 items-center text-zinc-600">
-                        <CheckIcon className="h-4 w-4 stroke-[3px] text-green-600" />
-                        <p className="text-sm">Verified Purchase</p>
+                        <CheckIcon className="h-4 w-4 stroke-[3px] text-teal-800" />
+                        <p className="text-sm">شراء موثق</p>
                     </div>
                 </div>
             </div>

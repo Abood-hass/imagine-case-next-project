@@ -3,7 +3,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getPaymentStatus } from './actions'
 import { useSearchParams } from 'next/navigation'
-// import { Loader2 } from 'lucide-react'
+import { UpdateIcon as Loader } from '@radix-ui/react-icons' 
 import PhonePreview from '@/components/PhonePreview'
 import { formatPrice } from '@/lib/utils'
 
@@ -22,7 +22,7 @@ const ThankYou = () => {
     return (
       <div className='w-full mt-24 flex justify-center'>
         <div className='flex flex-col items-center gap-2'>
-          {/* <Loader2 className='h-8 w-8 animate-spin text-zinc-500' /> */}
+          <Loader className='h-8 w-8 animate-spin text-zinc-500' />
           <h3 className='font-semibold text-xl'>Loading your order...</h3>
           <p>This won't take long.</p>
         </div>
@@ -34,7 +34,7 @@ const ThankYou = () => {
     return (
       <div className='w-full mt-24 flex justify-center'>
         <div className='flex flex-col items-center gap-2'>
-          {/* <Loader2 className='h-8 w-8 animate-spin text-zinc-500' /> */}
+          <Loader className='h-8 w-8 animate-spin text-zinc-500' />
           <h3 className='font-semibold text-xl'>Verifying your payment...</h3>
           <p>This might take a moment.</p>
         </div>

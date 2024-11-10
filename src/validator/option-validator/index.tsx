@@ -6,10 +6,10 @@
 import { PRODUCT_CONFIG } from "@/app/config/products"
 
 export const COLORS = [
-    { label: 'Black', value: 'black', tw: 'black' },
-    { label: 'Blue', value: 'blue', tw: 'blue-950' },
-    { label: 'Rose', value: 'rose', tw: 'rose-950' },
-    { label: 'Green', value: 'green', tw: 'green-950' },
+    { label: 'أسود', value: 'black', tw: 'black' },
+    { label: 'أزرق', value: 'blue', tw: 'blue-950' },
+    { label: 'روز', value: 'rose', tw: 'rose-950' },
+    { label: 'أخضر', value: 'green', tw: 'green-950' },
 ] as const
 
 
@@ -46,17 +46,18 @@ export const MODELS = {
 
 export const MATERIAL = {
     name: "material",
+    label: "خامات",
     options: [
         {
-            label: "Sillicon",
+            label: "سيليكون",
             value: "sillicon",
             description: undefined,
             price: PRODUCT_CONFIG.material.sillicon
         },
         {
-            label: "Soft Polycarbonate",
+            label: "بوليكاربونات ناعم",
             value: "polycarbonate",
-            description: "Scratch-resistant coating",
+            description: "حماية من الخدوش",
             price: PRODUCT_CONFIG.material.polycarbonate
         },
     ]
@@ -64,15 +65,16 @@ export const MATERIAL = {
 
 export const FINISH = {
     name: "finish",
+    label: "ملمس",
     options: [
         {
-            label: "Smooth Finish",
+            label: "ملمس ناعم",
             value: "smooth",
             description: undefined,
             price: PRODUCT_CONFIG.finish.smooth
         },
         {
-            label: "Texture Finish",
+            label: "ملمس خشن",
             value: "texture",
             description: "Soft grippy texture",
             price: PRODUCT_CONFIG.finish.texture

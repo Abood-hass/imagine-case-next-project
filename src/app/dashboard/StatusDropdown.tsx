@@ -10,7 +10,7 @@ import {
 import { cn } from '@/lib/utils'
 import { OrderStatus } from '@prisma/client'
 import { useMutation } from '@tanstack/react-query'
-// import { Check, ChevronsUpDown } from 'lucide-react'
+import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import { changeOrderStatus } from './actions'
 import { useRouter } from 'next/navigation'
 
@@ -42,7 +42,7 @@ const StatusDropdown = ({
           variant='outline'
           className='w-52 flex justify-between items-center'>
           {LABEL_MAP[orderStatus]}
-          {/* <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' /> */}
+          <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='p-0'>
@@ -56,12 +56,12 @@ const StatusDropdown = ({
               }
             )}
             onClick={() => mutate({ id, newStatus: status as OrderStatus })}>
-            {/* <Check
+             <CheckIcon
               className={cn(
                 'mr-2 h-4 w-4 text-primary',
                 orderStatus === status ? 'opacity-100' : 'opacity-0'
               )}
-            /> */}
+            /> 
             {LABEL_MAP[status as OrderStatus]}
           </DropdownMenuItem>
         ))}

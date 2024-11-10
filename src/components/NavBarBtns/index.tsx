@@ -41,14 +41,14 @@ const index = ({ var1, var2 }: { var1: any; var2: any }) => {
             href={"/api/auth/register"}
             className={buttonVariants({ size: "sm", variant: "ghost" })}
           >
-            Sign Up
+           حساب جديد
           </Link>
 
           <Link
             href={"/api/auth/login"}
             className={buttonVariants({ size: "sm", variant: "ghost" })}
           >
-            login
+            تسجيل دخول
             <ArrowRightIcon className="pl-2 h-full w-6" />
           </Link>
 

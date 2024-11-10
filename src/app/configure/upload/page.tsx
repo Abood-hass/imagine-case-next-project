@@ -71,27 +71,29 @@ const page = () => {
                                 {
                                     isUploading ?
                                         <div className="flex flex-col items-center">
-                                            <p>Uploading...</p>
+                                            <p>يتم الرفع...</p>
                                             <Progress
                                                 value={uploadProgress}
                                                 className="mt-2 w-40 h-2 bg-gray-300" />
                                         </div> :
                                         isPending ?
                                             <div className="flex flex-col items-center">
-                                                <p>Redireting, please wait...</p>
+                                                <p>يتم التحويل, يرجى الإنتظار</p>
                                             </div> :
                                             isDragOver ?
                                                 <p>
+                                                    ضع الصورة
                                                     <span className="font-semibold">
-                                                        Drop your {" "}
+                                                    {" "}هنا 
                                                     </span>
-                                                    Image
+
                                                 </p> :
                                                 <p>
                                                     <span className="font-semibold">
-                                                        Click to Upload {" "}
+                                                        الصورة
                                                     </span>
-                                                    Image
+                                                    {" "} أضغط لإختيار {" "}
+
                                                 </p>
                                 }
                             </div>
